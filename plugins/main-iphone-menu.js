@@ -19,7 +19,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
+if (!(who in global.db.data.users)) throw `_User not found!_`
 let pp = './XLICON.jpg'
 let user = global.db.data.users[who]
 let { name, exp, diamond, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who]
@@ -38,270 +38,272 @@ let quote = quotes[Math.floor(Math.random() * quotes.length)];
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 
-  ཌ|━━🤖 _BOT STATUS:_🤖━━|ད
-  ⚀------- *IPHONE-MENU* ------⚀
+ㅤㅤㅤㅤㅤㅤ𒅒 𝗜𝗠𝗘𝗡𝗨 ᳄ 𝗜𝗚𝗚𝗔 
 
-┌─𐂅  *MADE BY XLICON*  𐂅
-| ❁✓  *Creator:* XLICON-TEAM
-| 🤖  *Bot Name:* XLICON-V2
-| 💻  *Host:* Linux 🟩
-| 📣  *Prefix:* ${usedPrefix} 
-| 🕓  *Uptime:* ${uptime}
-| 💌  *Database:* ${rtotalreg} of ${totaluser} 
-| 📚  *Total Users:* ${totaluser} 
-╰───────────────▶
+ㅤ┌─𒀱ꪳ  𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 𝙓𝙇𝙄𝘾𝙊𝙉 ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ
+ㅤ| ⚙️  *ʙᴏᴛ*       𝗫𝗹𝗶𝗰𝗼𝗻𝗩2
+ㅤ| 💻  *ʜᴏsᴛ*      𝗟𝗶𝗻𝘂𝘅
+ㅤ|      *ᴘʀᴇғɪx*    ${usedPrefix} 
+ㅤ|      *ʀᴜɴᴛɪᴍᴇ*   ${uptime}
+ㅤ|      *ᴅᴀᴛᴀʙᴀsᴇ*  ${rtotalreg} of ${totaluser} 
+ㅤ|      *ᴜsᴇʀs*     ${totaluser} 
+ㅤ┗─══━━━━✥◈✥━━━━══┛
 
-┌─☠︎︎「⏰ *_Today's Sauce!_* ⏰」
-| 📆  *Today's Date:* ${date} 
-| ⏲️  *Current Time:* ${wib} 
-╰───────────────▶
+ㅤ┌─𒀱ꪳ  𝙋𝙧𝙚𝙨𝙚𝙣𝙩
+ㅤ|    *ᴅᴀᴛᴇ* ${date} 
+ㅤ|    *ᴛɪᴍᴇ* ${wib} 
+ㅤ┗─══━━━━✥◈✥━━━━══┛
 
-┌─𐂅「 *👤USER* 」
-| 👾  *User Tag:* ${taguser} 
-| 😇  *Name:* ${name} 
-| ✰  *Master Mind:* AB - TECH
-| 💎  *Diamonds:* -9999
-| 🏆  *Rank:* ${role}
-| 🎮  *XP:* ${exp} 
-╰───────────────▶
+ㅤ┌─𒀱ꪳ  𝙐𝙨𝙚𝙧 
+ㅤ|     *ɴᴀᴍᴇ*   ${taguser} 
+ㅤ|     *ɢᴇᴍs*   -ɪɴғɪɴɪᴛᴇ
+ㅤ|     *ʀᴀɴᴋ*   ${role}
+ㅤ|     *ᴇxᴘ*    ${exp} 
+ㅤ┗─══━━━━✥◈✥━━━━══┛
 
- 
-┌─☛『 *_Fellowship_* 』☚
-┃❏${usedPrefix}bible [chapter_number|chapter_name]
-❏${usedPrefix}quran [surah_number|surah_name]
-╰─────────────────➢
-┌─☛『 *_AI_* 』☚
-┃❏${usedPrefix}bingimg2
-┃❏${usedPrefix}chatgpt
-┃❏${usedPrefix}aisearch
-┃❏${usedPrefix}toanime
-┃❏${usedPrefix}gitagpt
-┃❏${usedPrefix}chat
-┃❏${usedPrefix}blackbox
-┃❏${usedPrefix}bingimg <query>
-┃❏${usedPrefix}tocartoon
-┃❏${usedPrefix}dalle
-╰─────────────────➢
-┌─☛『 *_image_* 』☚
-┃❏${usedPrefix}blackpink
-╰─────────────────➢
-┌─☛『 *_tools_* 』☚
-┃❏${usedPrefix}gemini <text>
-┃❏${usedPrefix}nowa
-┃❏${usedPrefix}qr <text>
-┃❏${usedPrefix}qrcode <text>
-┃❏${usedPrefix}weather ${usedPrefix}<place>
-┃❏${usedPrefix}shortlink <longLink>
-┃❏${usedPrefix}bitly <longlink>
-┃❏${usedPrefix}dehaze
-┃❏${usedPrefix}recolor
-┃❏${usedPrefix}hdr
-┃❏${usedPrefix}get
-┃❏${usedPrefix}length <amount>
-┃❏${usedPrefix}tinyurl <link>
-┃❏${usedPrefix}shorten <link>
-┃❏${usedPrefix}tempmail
-┃❏${usedPrefix}shazam
-┃❏${usedPrefix}cal <equation>
-┃❏${usedPrefix}.carbon <code>
-┃❏${usedPrefix}define <word>
-┃❏${usedPrefix}element
-┃❏${usedPrefix}itunes
-┃❏${usedPrefix}lyrics
-┃❏${usedPrefix}imdb
-┃❏${usedPrefix}course
-┃❏${usedPrefix}randomcourse
-┃❏${usedPrefix}readmore <text1>|<text2>
-┃❏${usedPrefix}readvo
-┃❏${usedPrefix}removebg
-┃❏${usedPrefix}ss <url>
-┃❏${usedPrefix}ssf <url>
-┃❏${usedPrefix}style <key> <text>
-┃❏${usedPrefix}subreddit
-┃❏${usedPrefix}telesticker  Ⓛ
-┃❏${usedPrefix}tourl
-┃❏${usedPrefix}translate <lang> <text>
-┃❏${usedPrefix}tts <lang> <task>
-┃❏${usedPrefix}wa
-┃❏${usedPrefix}wikipedia
-┃❏${usedPrefix}true
-┃❏${usedPrefix}findmusic
-┃❏${usedPrefix}githubstalk <query>
-╰─────────────────➢
-┌─☛『 *_group_* 』☚
-┃❏${usedPrefix}getbio <@tag/reply>  Ⓛ
-┃❏${usedPrefix}animequote
-┃❏${usedPrefix}Setdesc <text>
-┃❏${usedPrefix}setname <text>
-┃❏${usedPrefix}add
-┃❏${usedPrefix}delete
-┃❏${usedPrefix}delwarn @user
-┃❏${usedPrefix}demote (@tag)
-┃❏${usedPrefix}infogp
-┃❏${usedPrefix}hidetag
-┃❏${usedPrefix}invite <917xxx>
-┃❏${usedPrefix}kick @user
-┃❏${usedPrefix}link
-┃❏${usedPrefix}poll question|option|option
-┃❏${usedPrefix}profile
-┃❏${usedPrefix}promote
-┃❏${usedPrefix}resetlink
-┃❏${usedPrefix}setbye <text>
-┃❏${usedPrefix}group ${usedPrefix}open/close*
-┃❏${usedPrefix}setwelcome <text>
-┃❏${usedPrefix}simulate <event> @user
-┃❏${usedPrefix}staff
-┃❏${usedPrefix}tagall
-┃❏${usedPrefix}totag
-┃❏${usedPrefix}warn @user
-┃❏${usedPrefix}warns
-╰─────────────────➢
-┌─☛『 *_anime_* 』☚
-┃❏${usedPrefix}anime
-┃❏${usedPrefix}akira
-┃❏${usedPrefix}akiyama
-┃❏${usedPrefix}anna
-┃❏${usedPrefix}asuna
-┃❏${usedPrefix}ayuzawa
-┃❏${usedPrefix}boruto
-┃❏${usedPrefix}chiho
-┃❏${usedPrefix}chitoge
-┃❏${usedPrefix}deidara
-┃❏${usedPrefix}erza
-┃❏${usedPrefix}elaina
-┃❏${usedPrefix}eba
-┃❏${usedPrefix}emilia
-┃❏${usedPrefix}hestia
-┃❏${usedPrefix}hinata
-┃❏${usedPrefix}inori
-┃❏${usedPrefix}isuzu
-┃❏${usedPrefix}itachi
-┃❏${usedPrefix}itori
-┃❏${usedPrefix}kaga
-┃❏${usedPrefix}kagura
-┃❏${usedPrefix}kaori
-┃❏${usedPrefix}keneki
-┃❏${usedPrefix}kotori
-┃❏${usedPrefix}kurumi
-┃❏${usedPrefix}madara
-┃❏${usedPrefix}mikasa
-┃❏${usedPrefix}miku
-┃❏${usedPrefix}minato
-┃❏${usedPrefix}naruto
-┃❏${usedPrefix}nezuko
-┃❏${usedPrefix}sagiri
-┃❏${usedPrefix}sasuke
-┃❏${usedPrefix}sakura
-┃❏${usedPrefix}akira
-┃❏${usedPrefix}amv  Ⓛ
-┃❏${usedPrefix}waifu
-┃❏${usedPrefix}neko
-┃❏${usedPrefix}zerotwo
-┃❏${usedPrefix}loli
-┃❏${usedPrefix}jjanime  Ⓛ
-┃❏${usedPrefix}pokedex <pokemon>
-┃❏${usedPrefix}trace
-╰─────────────────➢
-┌─☛『 *_img_* 』☚
-┃❏${usedPrefix}messi
-┃❏${usedPrefix}cristianoronaldo
-┃❏${usedPrefix}cr7
-┃❏${usedPrefix}ppcouple
-┃❏${usedPrefix}ppcp
-┃❏${usedPrefix}pinterest
-╰─────────────────➢
-┌─☛『 *_owner_* 』☚
-┃❏${usedPrefix}leavegc
-┃❏${usedPrefix}out
-┃❏${usedPrefix}deletechat
-┃❏${usedPrefix}pin
-┃❏${usedPrefix}unpin
-┃❏${usedPrefix}deletechat
-┃❏${usedPrefix}addprem <@tag>
-┃❏${usedPrefix}addowner @user
-┃❏${usedPrefix}allow <@tag>
-┃❏${usedPrefix}HEROKU
-┃❏${usedPrefix}ban @user
-┃❏${usedPrefix}banchat
-┃❏${usedPrefix}tx
-┃❏${usedPrefix}broadcastgroup <text>
-┃❏${usedPrefix}bcgc <text>
-┃❏${usedPrefix}cleartmp
-┃❏${usedPrefix}delexpired
-┃❏${usedPrefix}delprem @user
-┃❏${usedPrefix}removeowner @user
-┃❏${usedPrefix}setppbotfull
-┃❏${usedPrefix}getplugin <name file>
-┃❏${usedPrefix}getfile <name file>
-┃❏${usedPrefix}join <chat.whatsapp.com> <dias>
-┃❏${usedPrefix}reset <54xxx>
-┃❏${usedPrefix}resetprefix
-┃❏${usedPrefix}restart
-┃❏${usedPrefix}.setprefix
-┃❏${usedPrefix}.setprefix [symbol]
-┃❏${usedPrefix}unban @user
-┃❏${usedPrefix}unbanchat
-┃❏${usedPrefix}update
-┃❏${usedPrefix}update now
-┃❏${usedPrefix}config
-┃❏${usedPrefix}listban
-┃❏${usedPrefix}deleteplugin <name>
-╰─────────────────➢
-┌─☛『 *_fun_* 』☚
-┃❏${usedPrefix}afk <reason>
-┃❏${usedPrefix}tomp3
-┃❏${usedPrefix}toav
-┃❏${usedPrefix}toxicity
-┃❏${usedPrefix}bot
-┃❏${usedPrefix}character @tag
-┃❏${usedPrefix}dare
-┃❏${usedPrefix}flirt
-┃❏${usedPrefix}gay @user
-┃❏${usedPrefix}joke
-┃❏${usedPrefix}pickupline
-┃❏${usedPrefix}question
-┃❏${usedPrefix}shayari
-┃❏${usedPrefix}ship
-┃❏${usedPrefix}yomamajoke
-┃❏${usedPrefix}truth
-┃❏${usedPrefix}waste @user
-┃❏${usedPrefix}perv
-┃❏${usedPrefix}handsome
-┃❏${usedPrefix}hot
-┃❏${usedPrefix}sexy
-┃❏${usedPrefix}ugly
-┃❏${usedPrefix}cute
-┃❏${usedPrefix}playboy
-┃❏${usedPrefix}playgirl
-┃❏${usedPrefix}beautiful
-┃❏${usedPrefix}lesbian
-┃❏${usedPrefix}whore
-┃❏${usedPrefix}motherfucker
-┃❏${usedPrefix}sucker
-┃❏${usedPrefix}horny
-┃❏${usedPrefix}foolish
-┃❏${usedPrefix}nibba
-┃❏${usedPrefix}nibbi
-┃❏${usedPrefix}bitch
-┃❏${usedPrefix}waifu
-┃❏${usedPrefix}crackhead
-┃❏${usedPrefix}rascal
-┃❏${usedPrefix}idiot
-┃❏${usedPrefix}girlyboy
-┃❏${usedPrefix}tomboy
-┃❏${usedPrefix}gigachad
-┃❏${usedPrefix}mf
-┃❏${usedPrefix}introvert
-┃❏${usedPrefix}extrovert
-┃❏${usedPrefix}sigma
-┃❏${usedPrefix}psycho
-┃❏${usedPrefix}brainless
-┃❏${usedPrefix}useless
-┃❏${usedPrefix}singer
-┃❏${usedPrefix}image
-┃❏${usedPrefix}meme
-┃❏${usedPrefix}quote
-╰─────────────────➢
+ㅤㅤㅤㅤㅤ ㅤㅤ  ㅤ𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨
+
+ㅤ┌─𒀱ꪳ  𝙍𝙚𝙡𝙞𝙜𝙞𝙤𝙪𝙨
+ㅤ┃❏ㅤ${usedPrefix}ʙɪʙʟᴇ [ ᴄʜ_ɴᴜᴍ|ᴄʜ_ɴᴀᴍᴇ]
+ㅤ┃❏ㅤ${usedPrefix}ǫᴜʀᴀɴ [sᴜʀᴀʜ_ɴᴜᴍ|sᴜʀᴀʜ_ɴᴀᴍᴇ]
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
+ㅤ┌─𒀱ꪳ  𝙄𝙣𝙩𝙚𝙡𝙡𝙞𝙜𝙚𝙣𝙘𝙚
+ㅤ┃❏ㅤ${usedPrefix}ʙɪɴɢɪᴍɢ2
+ㅤ┃❏ㅤ${usedPrefix}ᴄʜᴀᴛɢᴘᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴀɪsᴇᴀʀᴄʜ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴀɴɪᴍᴇ
+ㅤ┃❏ㅤ${usedPrefix}ɢɪᴛᴀɢᴘᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴄʜᴀᴛ
+ㅤ┃❏ㅤ${usedPrefix}ʙʟᴀᴄᴋʙᴏx
+ㅤ┃❏ㅤ${usedPrefix}ʙɪɴɢɪᴍɢ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴄᴀʀᴛᴏᴏɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴀʟʟ ᴇ
+  ┗─══━━━━✥◈✥━━━━══┛
+  
+ㅤ┌─𒀱ꪳ  𝙄𝙢𝙖𝙜𝙚
+ㅤ┃❏${usedPrefix}ʙʟᴀᴄᴋᴘɪɴᴋ
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
+ㅤ┌─𒀱ꪳ  𝙏𝙤𝙤𝙡𝙨
+ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴍɪɴɪ
+ㅤ┃❏ㅤ${usedPrefix}ɴᴏᴡᴀ
+ㅤ┃❏ㅤ${usedPrefix}ǫʀ
+ㅤ┃❏ㅤ${usedPrefix}ǫʀᴄᴏᴅᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴡᴇᴀᴛʜᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}sʜᴏʀᴛʟɪɴᴋ
+ㅤ┃❏ㅤ${usedPrefix}ʙɪᴛʟʏ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʜᴀᴢᴇ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇᴄᴏʟᴏʀ
+ㅤ┃❏ㅤ${usedPrefix}ʜᴅʀ
+ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴛ
+ㅤ┃❏ㅤ${usedPrefix}ʟᴇɴɢᴛʜ
+ㅤ┃❏ㅤ${usedPrefix}ᴛɪɴʏᴜʀʟ
+ㅤ┃❏ㅤ${usedPrefix}sʜᴏʀᴛᴇɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴇᴍᴘᴍᴀɪʟ
+ㅤ┃❏ㅤ${usedPrefix}sʜᴀᴢᴀᴍ
+ㅤ┃❏ㅤ${usedPrefix}ᴄᴀʟ
+ㅤ┃❏ㅤ${usedPrefix}ᴄᴀʀʙᴏɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇғɪɴᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴇʟᴇᴍᴇɴᴛ
+ㅤ┃❏ㅤ${usedPrefix}ɪᴛᴜɴᴇs
+ㅤ┃❏ㅤ${usedPrefix}ʟʏʀɪᴄs
+ㅤ┃❏ㅤ${usedPrefix}ɪᴍᴅʙ
+ㅤ┃❏ㅤ${usedPrefix}ᴄᴏᴜʀsᴇ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴀɴᴅᴏᴍᴄᴏᴜʀsᴇ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇᴀᴅᴍᴏʀᴇ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇᴀᴅᴠᴏ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇᴍᴏᴠᴇʙɢ
+ㅤ┃❏ㅤ${usedPrefix}ss
+ㅤ┃❏ㅤ${usedPrefix}ssғ
+ㅤ┃❏ㅤ${usedPrefix}sᴛʏʟᴇ
+ㅤ┃❏ㅤ${usedPrefix}sᴜʙʀᴇᴅᴅɪᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴇʟᴇsᴛɪᴄᴋᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴜʀʟ
+ㅤ┃❏ㅤ${usedPrefix}ᴛʀᴀɴsʟᴀᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴛs
+ㅤ┃❏ㅤ${usedPrefix}ᴡᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴡɪᴋɪᴘᴇᴅɪᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴛʀᴜᴇ
+ㅤ┃❏ㅤ${usedPrefix}ғɪɴᴅᴍᴜsɪᴄ
+ㅤ┃❏ㅤ${usedPrefix}ɢɪᴛʜᴜʙsᴛᴀʟᴋ
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
+ㅤ┌─𒀱ꪳ  𝙂𝙧𝙤𝙪𝙥𝘾𝙝𝙖𝙩
+ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴛʙɪᴏ
+ㅤ┃❏ㅤ${usedPrefix}ᴀɴɪᴍᴇǫᴜᴏᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}sᴇᴛᴅᴇsᴄ
+ㅤ┃❏ㅤ${usedPrefix}sᴇᴛɴᴀᴍᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴀᴅᴅ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴇᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴡᴀʀɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇᴍᴏᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ɪɴғᴏɢᴘ
+ㅤ┃❏ㅤ${usedPrefix}ʜɪᴅᴇᴛᴀɢ
+ㅤ┃❏ㅤ${usedPrefix}ɪɴᴠɪᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴋɪᴄᴋ
+ㅤ┃❏ㅤ${usedPrefix}ʟɪɴᴋ
+ㅤ┃❏ㅤ${usedPrefix}ᴘᴏʟʟ
+ㅤ┃❏ㅤ${usedPrefix}ᴘʀᴏғɪʟᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴘʀᴏᴍᴏᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇsᴇᴛʟɪɴᴋ
+ㅤ┃❏ㅤ${usedPrefix}sᴇᴛʙʏᴇ
+ㅤ┃❏ㅤ${usedPrefix}ɢʀᴏᴜᴘ ᴏᴘᴇɴ/ᴄʟᴏsᴇ
+ㅤ┃❏ㅤ${usedPrefix}sᴇᴛᴡᴇʟᴄᴏᴍᴇ
+ㅤ┃❏ㅤ${usedPrefix}sɪᴍᴜʟᴀᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}sᴛᴀғғ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴀɢᴀʟʟ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴛᴀɢ
+ㅤ┃❏ㅤ${usedPrefix}ᴡᴀʀɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴡᴀʀɴs
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
+ㅤ┌─𒀱ꪳ  𝘼𝙣𝙞𝙢𝙚
+ㅤ┃❏ㅤ${usedPrefix}ᴀɴɪᴍᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴀᴋɪʀᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴀᴋɪʏᴀᴍᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴀɴɴᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴀsᴜɴᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴀʏᴜᴢᴀᴍᴀ
+ㅤ┃❏ㅤ${usedPrefix}ʙᴏʀᴜᴛᴏ
+ㅤ┃❏ㅤ${usedPrefix}ᴄʜɪʜᴏ
+ㅤ┃❏ㅤ${usedPrefix}ᴄʜɪᴛᴏɢᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇɪᴅᴀʀᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴇʀᴢᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴇʟᴀɪɴᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴇʙᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴇᴍɪʟɪᴀ
+ㅤ┃❏ㅤ${usedPrefix}ʜᴇsᴛɪᴀ
+ㅤ┃❏ㅤ${usedPrefix}ʜɪɴᴀᴛᴀ
+ㅤ┃❏ㅤ${usedPrefix}ɪɴᴏʀɪ
+ㅤ┃❏ㅤ${usedPrefix}ɪsᴜᴢᴜ
+ㅤ┃❏ㅤ${usedPrefix}ɪᴛᴀᴄʜɪ
+ㅤ┃❏ㅤ${usedPrefix}ɪᴛᴏʀɪ
+ㅤ┃❏ㅤ${usedPrefix}ᴋᴀɢᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴋᴀɢᴜʀᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴋᴀᴏʀɪ
+ㅤ┃❏ㅤ${usedPrefix}ᴋᴇɴᴇᴋɪ
+ㅤ┃❏ㅤ${usedPrefix}ᴋᴏᴛᴏʀɪ
+ㅤ┃❏ㅤ${usedPrefix}ᴋᴜʀᴜᴍɪ
+ㅤ┃❏ㅤ${usedPrefix}ᴍᴀᴅᴀʀᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴍɪᴋᴀsᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴍɪᴋᴜ
+ㅤ┃❏ㅤ${usedPrefix}ᴍɪɴᴀᴛᴏ
+ㅤ┃❏ㅤ${usedPrefix}ɴᴀʀᴜᴛᴏ
+ㅤ┃❏ㅤ${usedPrefix}ɴᴇᴢᴜᴋᴏ
+ㅤ┃❏ㅤ${usedPrefix}sᴀɢɪʀɪ
+ㅤ┃❏ㅤ${usedPrefix}sᴀsᴜᴋᴇ
+ㅤ┃❏ㅤ${usedPrefix}sᴀᴋᴜʀᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴀᴍᴠ
+ㅤ┃❏ㅤ${usedPrefix}ᴡᴀɪғᴜ
+ㅤ┃❏ㅤ${usedPrefix}ɴᴇᴋᴏ
+ㅤ┃❏ㅤ${usedPrefix}ᴢᴇʀᴏᴛᴡᴏ
+ㅤ┃❏ㅤ${usedPrefix}ʟᴏʟɪ
+ㅤ┃❏ㅤ${usedPrefix}ᴊᴊᴀɴɪᴍᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴘᴏᴋᴇᴅᴇx
+ㅤ┃❏ㅤ${usedPrefix}ᴛʀᴀᴄᴇ
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
+ㅤ┌─𒀱ꪳ  𝙋𝙞𝙘
+ㅤ┃❏ㅤ${usedPrefix}ᴍᴇssɪ
+ㅤ┃❏ㅤ${usedPrefix}ᴄʀ7
+ㅤ┃❏ㅤ${usedPrefix}ᴘᴘᴄᴏᴜᴘʟᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴘᴘᴄᴘ
+ㅤ┃❏ㅤ${usedPrefix}ᴘɪɴᴛᴇʀᴇsᴛ
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
+ㅤ┌─𒀱ꪳ  𝙊𝙬𝙣𝙚𝙧
+ㅤ┃❏ㅤ${usedPrefix}ʟᴇᴀᴠᴇɢᴄ
+ㅤ┃❏ㅤ${usedPrefix}ᴏᴜᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴇᴛᴇᴄʜᴀᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴘɪɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴜɴᴘɪɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴀᴅᴅᴘʀᴇᴍ
+ㅤ┃❏ㅤ${usedPrefix}ᴀᴅᴅᴏᴡɴᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}ᴀʟʟᴏᴡ
+ㅤ┃❏ㅤ${usedPrefix}ʜᴇʀᴏᴋᴜ
+ㅤ┃❏ㅤ${usedPrefix}ʙᴀɴ
+ㅤ┃❏ㅤ${usedPrefix}ʙᴀɴᴄʜᴀᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴛx
+ㅤ┃❏ㅤ${usedPrefix}ʙʀᴏᴀᴅᴄᴀsᴛɢʀᴏᴜᴘ
+ㅤ┃❏ㅤ${usedPrefix}ʙᴄɢᴄ
+ㅤ┃❏ㅤ${usedPrefix}ᴄʟᴇᴀʀᴛᴍᴘ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴇxᴘɪʀᴇᴅ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴘʀᴇᴍ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇᴍᴏᴠᴇᴏᴡɴᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}sᴇᴛᴘᴘʙᴏᴛғᴜʟʟ
+ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴛᴘʟᴜɢɪɴ
+ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴛғɪʟᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴊᴏɪɴ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇsᴇᴛ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇsᴇᴛᴘʀᴇғɪx
+ㅤ┃❏ㅤ${usedPrefix}ʀᴇsᴛᴀʀᴛ
+ㅤ┃❏ㅤ${usedPrefix}sᴇᴛᴘʀᴇғɪx
+ㅤ┃❏ㅤ${usedPrefix}ᴜɴʙᴀɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴜɴʙᴀɴᴄʜᴀᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴜᴘᴅᴀᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴜᴘᴅᴀᴛᴇ ɴᴏᴡ
+ㅤ┃❏ㅤ${usedPrefix}ᴄᴏɴғɪɢ
+ㅤ┃❏ㅤ${usedPrefix}ʟɪsᴛʙᴀɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴇᴛᴇᴘʟᴜɢɪɴ
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
+ㅤ┌─𒀱ꪳ  𝙁𝙪𝙣
+ㅤ┃❏ㅤ${usedPrefix}ᴀғᴋ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴍᴘ3
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴀᴠ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏxɪᴄɪᴛʏ
+ㅤ┃❏ㅤ${usedPrefix}ʙᴏᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴄʜᴀʀᴀᴄᴛᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}ᴅᴀʀᴇ
+ㅤ┃❏ㅤ${usedPrefix}ғʟɪʀᴛ
+ㅤ┃❏ㅤ${usedPrefix}ɢᴀʏ
+ㅤ┃❏ㅤ${usedPrefix}ᴊᴏᴋᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴘɪᴄᴋᴜᴘʟɪɴᴇ
+ㅤ┃❏ㅤ${usedPrefix}ǫᴜᴇsᴛɪᴏɴ
+ㅤ┃❏ㅤ${usedPrefix}sʜᴀʏᴀʀɪ
+ㅤ┃❏ㅤ${usedPrefix}sʜɪᴘ
+ㅤ┃❏ㅤ${usedPrefix}ʏᴏᴍᴀᴍᴀᴊᴏᴋᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴛʀᴜᴛʜ
+ㅤ┃❏ㅤ${usedPrefix}ᴡᴀsᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴘᴇʀᴠ
+ㅤ┃❏ㅤ${usedPrefix}ʜᴀɴᴅsᴏᴍᴇ
+ㅤ┃❏ㅤ${usedPrefix}ʜᴏᴛ
+ㅤ┃❏ㅤ${usedPrefix}sᴇxʏ
+ㅤ┃❏ㅤ${usedPrefix}ᴜɢʟʏ
+ㅤ┃❏ㅤ${usedPrefix}ᴄᴜᴛᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴘʟᴀʏʙᴏʏ
+ㅤ┃❏ㅤ${usedPrefix}ᴘʟᴀʏɢɪʀʟ
+ㅤ┃❏ㅤ${usedPrefix}ʙᴇᴀᴜᴛʏғᴜʟ
+ㅤ┃❏ㅤ${usedPrefix}ʟᴇsʙɪᴀɴ
+ㅤ┃❏ㅤ${usedPrefix}ᴡʜᴏʀᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴍᴏᴛʜᴇʀғᴜᴄᴋᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}sᴜᴄᴋᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}ʜᴏʀɴʏ
+ㅤ┃❏ㅤ${usedPrefix}ғᴏᴏʟɪsʜ
+ㅤ┃❏ㅤ${usedPrefix}ɴɪʙʙᴀ
+ㅤ┃❏ㅤ${usedPrefix}ɴɪʙʙɪ
+ㅤ┃❏ㅤ${usedPrefix}ʙɪᴛᴄʜ
+ㅤ┃❏ㅤ${usedPrefix}ᴡᴀɪғᴜ
+ㅤ┃❏ㅤ${usedPrefix}ᴄʀᴀᴄᴋʜᴇᴀᴅ
+ㅤ┃❏ㅤ${usedPrefix}ʀᴀsᴄᴀʟ
+ㅤ┃❏ㅤ${usedPrefix}ɪᴅɪᴏᴛ
+ㅤ┃❏ㅤ${usedPrefix}ɢɪʀʟʏʙᴏʏ
+ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴍʙᴏʏ
+ㅤ┃❏ㅤ${usedPrefix}ɢɪɢᴀᴄʜᴀᴅ
+ㅤ┃❏ㅤ${usedPrefix}ᴍғ
+ㅤ┃❏ㅤ${usedPrefix}ɪɴᴛʀᴏᴠᴇʀᴛ
+ㅤ┃❏ㅤ${usedPrefix}ᴇxᴛʀᴏᴠᴇʀᴛ
+ㅤ┃❏ㅤ${usedPrefix}sɪɢᴍᴀ
+ㅤ┃❏ㅤ${usedPrefix}ᴘsʏᴄʜᴏ
+ㅤ┃❏ㅤ${usedPrefix}ʙʀᴀɪɴʟᴇss
+ㅤ┃❏ㅤ${usedPrefix}ᴜsᴇʟᴇss
+ㅤ┃❏ㅤ${usedPrefix}sɪɴɢᴇʀ
+ㅤ┃❏ㅤ${usedPrefix}ɪᴍᴀɢᴇ
+ㅤ┃❏ㅤ${usedPrefix}ᴍᴇᴍᴇ
+ㅤ┃❏ㅤ${usedPrefix}ǫᴜᴏᴛᴇ
+ㅤ┗─══━━━━✥◈✥━━━━══┛
+
 ┌─☛『 *_reaction_* 』☚
 ┃❏${usedPrefix}bully @tag
 ┃❏${usedPrefix}cuddle @tag

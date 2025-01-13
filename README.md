@@ -1,5 +1,9 @@
-# `XLICON-V2-MD DEPLOY ON KOYEB✅ HIGHLY RECOMMENDED THANKS`
+# `XLICON-V2-MD DEPLOY ON KOYEB✅ HIGHLY RECOMMENDED THANKS `
 <br>
+
+# `NOTE : WE HATE BUGS AND THOSE STUFF WE ARE REALLY SERIOUS ABOUT IT THOSE OF YOU PUTTING VIRUS BUGS IN YOUR BOTS PLEASE STOP WE HATE IT A LOT`
+
+
 <br>
 
 #  ᴄᴏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ `ＷＨＩＴＥ４４４ ? ?`
@@ -249,6 +253,7 @@ Misusing the bot may result in a ban from WhatsApp. Use at your own risk.
 - Not For Sale
 - Don't Forget to Give Credits If you are using or Reuploading My Plugins/files
 - Have A Good Day Ahead
+- Bot is for educational purpose and for learning not for spamming thank you
 - Don't Use This Script As Your Bot Base 
 ---
 
