@@ -1,32 +1,63 @@
+import fetch from 'node-fetch';
+import { format } from 'util';
 
-import fetch from 'node-fetch'
-import { format } from 'util'
 let handler = async (m, { text, conn }) => {
+  try {
     if (!text && !(m.quoted && m.quoted.text)) {
-    if (!/^https?:\/\//.test(text)) throw `🖇️ provide a link...`
-         }
-  if (!text && m.quoted && m.quoted.text) {
-    text = m.quoted.text;
-  }
-    let _url = new URL(text)
-    let url = global.API(_url.origin, _url.pathname, Object.fromEntries(_url.searchParams.entries()), 'APIKEY')
-    let res = await fetch(url)
-    if (res.headers.get('content-length') > 100 * 1024 * 1024 * 1024) {
-        // delete res
-        throw `Content-Length: ${res.headers.get('content-length')}`
+      return m.reply(
+        `🖇️ Please provide a valid link.\n\nUsage:\n\`/get <url>\``
+      );
     }
-    if (!/text|json/.test(res.headers.get('content-type'))) return conn.sendFile(m.chat, url, 'file', text, m)
-    let txt = await res.buffer()
+    if (!text && m.quoted && m.quoted.text) {
+      text = m.quoted.text;
+    }
+    if (!/^https?:\/\//.test(text)) {
+      throw new Error(
+        `🖇️ The provided input is not a valid URL. Make sure it starts with http:// or https://.`
+      );
+    }
+    const parsedUrl = new URL(text);
+    const apiUrl = global.API(
+      parsedUrl.origin,
+      parsedUrl.pathname,
+      Object.fromEntries(parsedUrl.searchParams.entries()),
+      'APIKEY'
+    );
+    const response = await fetch(apiUrl);
+    const contentType = response.headers.get('content-type');
+    const contentLength = response.headers.get('content-length');
+    if (contentLength && parseInt(contentLength, 10) > 100 * 1024 * 1024) {
+      throw new Error(
+        `⚠️ The file size exceeds the limit: ${contentLength} bytes.`
+      );
+    }
+    if (!/text|json/.test(contentType)) {
+      await conn.sendFile(
+        m.chat,
+        apiUrl,
+        'file',
+        `Here is your requested file:\n${text}`,
+        m
+      );
+      return;
+    }
+    const buffer = await response.buffer();
+    let output;
     try {
-        txt = format(JSON.parse(txt + ''))
+      output = format(JSON.parse(buffer.toString()));
     } catch (e) {
-        txt = txt + ''
-    } finally {
-        m.reply(txt.slice(0, 65536) + '')
+      output = buffer.toString();
     }
-}
-handler.help = ['get']
-handler.tags = ['tools']
-handler.command = /^(fetch|get)$/i
+    m.reply(`*RESULT:*\n\n\`\`\`${output.slice(0, 65536)}\`\`\``);
+  } catch (err) {
+    console.error(err);
+    m.reply(
+      `❌ An error occurred:\n\n- ${err.message || err.toString()}`
+    );
+  }
+};
+handler.help = ['get'];
+handler.tags = ['tools'];
+handler.command = /^(fetch|get)$/i;
 
-export default handler
+export default handler;

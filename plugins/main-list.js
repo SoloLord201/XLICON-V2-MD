@@ -5,13 +5,19 @@ let handler = async (m, { conn, usedPrefix, command}) => {
       let pp = './XLICON.jpg'
       let more = String.fromCharCode(8206);
       let readMore = more.repeat(850); 
+      let hash = global.botname || 'Xlicon Bot';
+      let img = './XLICON.jpg'; 
+      let url = 'https://github.com/abrahamdw882'; 
+      let murl = 'https://Instagram.com/abraham.dwamena.182';
     
       let lkr;
       switch (command) {
         case 'list':
 lkr = "*Get excited, here are your options:*\n\n" +
 "🤖 *" + usedPrefix + "botmenu* - The Bot's secret control panel. What's your command, oh great one?\n\n" +
-"👑 *" + usedPrefix + "ownermenu* - The sacred scroll only for the chosen one. Yep, that's you, Boss!\n\n" +    
+"🐱‍🏍 *" + usedPrefix + "logomenu2* - The Bot's logomenu. logomenu a nice menu, oh great right?\n\n" +      
+"👑 *" + usedPrefix + "ownermenu* - The sacred scroll only for the chosen one. Yep, that's you, Boss!\n\n" +  
+"😉 *" + usedPrefix + "animemenu* - all ur favs are packed her , oh great right hehe?\n\n" + 
 "🧑‍🤝‍🧑 *" + usedPrefix + "groupmenu* - Group shenanigans central! Unite, chat, conquer!\n\n" +  
 "📥 *" + usedPrefix + "dlmenu* - 'DL' stands for 'Delicious Loot'. Come grab your goodies!\n\n" +   
 "🎉 *" + usedPrefix + "funmenu* - The bot's party hat. Games, jokes and instant ROFLs. Let's get this party started!\n\n" +   
@@ -363,8 +369,30 @@ break;
         default:
           lkr = `Invalid command. Type ${usedPrefix}list to see available options.`;
       }
-    
-      conn.sendFile(m.chat, pp, 'perfil.jpg', lkr, m, false, { mentions: [who] });
+
+      const messageObject = {
+    caption: lkr,
+    image: { url: pp },
+    contextInfo: {
+      isForwarded: true,
+      forwardingScore: 999,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: '120363230794474148@newsletter',
+        newsletterName: global.author || 'Xlicon News',
+        serverMessageId: -1
+      },
+      externalAdReply: {
+        title: "↺ |◁   II   ▷|   ♡",
+        body: hash,
+        thumbnailUrl: img,
+        sourceUrl: url,
+        mediaType: 2,
+        mediaUrl: murl,
+        showAdAttribution: true
+      }
+    }
+  };
+      await conn.sendFile(m.chat, pp, 'perfil.jpg', lkr, m, false, messageObject);
     
       let done = '👍';
       m.react(done);

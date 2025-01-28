@@ -34,12 +34,9 @@ let more = String.fromCharCode(8206)
 let readMore = more.repeat(850) 
 let greeting = ucapan()
 let quote = quotes[Math.floor(Math.random() * quotes.length)];
-
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
-
-ㅤㅤㅤㅤㅤ   ㅤ𒅒 𝗜𝗠𝗘𝗡𝗨 ᳄ 𝗜𝗚𝗚𝗔 
-
+ㅤ𒅒 𝗜𝗠𝗘𝗡𝗨 ᳄ 𝗜𝗚𝗚𝗔 
 ㅤ┌─𒀱ꪳ  𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 𝙓𝙇𝙄𝘾𝙊𝙉 ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ
 ㅤ┃ ⚙️  *ʙᴏᴛ*       𝗫𝗹𝗶𝗰𝗼𝗻𝗩2
 ㅤ┃ 💻  *ʜᴏsᴛ*      𝗟𝗶𝗻𝘂𝘅
@@ -48,12 +45,10 @@ let str = `
 ㅤ┃      *ᴅᴀᴛᴀʙᴀsᴇ*  ${rtotalreg} of ${totaluser} 
 ㅤ┃      *ᴜsᴇʀs*     ${totaluser} 
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙋𝙧𝙚𝙨𝙚𝙣𝙩
 ㅤ┃    *ᴅᴀᴛᴇ* ${date} 
 ㅤ┃    *ᴛɪᴍᴇ* ${wib} 
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙐𝙨𝙚𝙧 
 ㅤ┃     *ɴᴀᴍᴇ*   ${taguser} 
 ㅤ┃     *ɴᴀᴍᴇ*   ${username}
@@ -61,14 +56,11 @@ let str = `
 ㅤ┃     *ʀᴀɴᴋ*   ${role}
 ㅤ┃     *ᴇxᴘ*    ${exp} 
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤㅤㅤㅤㅤ ㅤㅤ     ㅤ𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨
-
 ㅤ┌─𒀱ꪳ  𝙍𝙚𝙡𝙞𝙜𝙞𝙤𝙪𝙨
 ㅤ┃❏ㅤ${usedPrefix}ʙɪʙʟᴇ [ ᴄʜ_ɴᴜᴍ|ᴄʜ_ɴᴀᴍᴇ]
 ㅤ┃❏ㅤ${usedPrefix}ǫᴜʀᴀɴ [sᴜʀᴀʜ_ɴᴜᴍ|sᴜʀᴀʜ_ɴᴀᴍᴇ]
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙄𝙣𝙩𝙚𝙡𝙡𝙞𝙜𝙚𝙣𝙘𝙚
 ㅤ┃❏ㅤ${usedPrefix}ʙɪɴɢɪᴍɢ2
 ㅤ┃❏ㅤ${usedPrefix}ᴄʜᴀᴛɢᴘᴛ
@@ -85,7 +77,6 @@ let str = `
 ㅤ┌─𒀱ꪳ  𝙄𝙢𝙖𝙜𝙚
 ㅤ┃❏ ${usedPrefix}ʙʟᴀᴄᴋᴘɪɴᴋ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙏𝙤𝙤𝙡𝙨
 ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴍɪɴɪ
 ㅤ┃❏ㅤ${usedPrefix}ɴᴏᴡᴀ
@@ -129,7 +120,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ғɪɴᴅᴍᴜsɪᴄ
 ㅤ┃❏ㅤ${usedPrefix}ɢɪᴛʜᴜʙsᴛᴀʟᴋ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙂𝙧𝙤𝙪𝙥𝘾𝙝𝙖𝙩
 ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴛʙɪᴏ
 ㅤ┃❏ㅤ${usedPrefix}ᴀɴɪᴍᴇǫᴜᴏᴛᴇ
@@ -158,7 +148,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴡᴀʀɴ
 ㅤ┃❏ㅤ${usedPrefix}ᴡᴀʀɴs
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘼𝙣𝙞𝙢𝙚
 ㅤ┃❏ㅤ${usedPrefix}ᴀɴɪᴍᴇ
 ㅤ┃❏ㅤ${usedPrefix}ᴀᴋɪʀᴀ
@@ -204,7 +193,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴘᴏᴋᴇᴅᴇx
 ㅤ┃❏ㅤ${usedPrefix}ᴛʀᴀᴄᴇ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙋𝙞𝙘
 ㅤ┃❏ㅤ${usedPrefix}ᴍᴇssɪ
 ㅤ┃❏ㅤ${usedPrefix}ᴄʀ7
@@ -212,7 +200,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴘᴘᴄᴘ
 ㅤ┃❏ㅤ${usedPrefix}ᴘɪɴᴛᴇʀᴇsᴛ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙊𝙬𝙣𝙚𝙧
 ㅤ┃❏ㅤ${usedPrefix}ʟᴇᴀᴠᴇɢᴄ
 ㅤ┃❏ㅤ${usedPrefix}ᴏᴜᴛ
@@ -248,7 +235,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ʟɪsᴛʙᴀɴ
 ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴇᴛᴇᴘʟᴜɢɪɴ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙁𝙪𝙣
 ㅤ┃❏ㅤ${usedPrefix}ᴀғᴋ
 ㅤ┃❏ㅤ${usedPrefix}ᴛᴏᴍᴘ3
@@ -304,7 +290,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴍᴇᴍᴇ
 ㅤ┃❏ㅤ${usedPrefix}ǫᴜᴏᴛᴇ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘼𝙘𝙩𝙞𝙤𝙣𝙨
 ㅤ┃❏ㅤ${usedPrefix}ʙᴜʟʟʏ
 ㅤ┃❏ㅤ${usedPrefix}ᴄᴜᴅᴅʟᴇ
@@ -333,7 +318,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴅᴀɴᴄᴇ
 ㅤ┃❏ㅤ${usedPrefix}ᴄʀɪɴɢᴇ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙐𝙩𝙞𝙡𝙞𝙩𝙞𝙚𝙨
 ㅤ┃❏ㅤ${usedPrefix}ʙᴍɪ
 ㅤ┃❏ㅤ${usedPrefix}ᴄʀʏᴘᴛᴏ
@@ -342,7 +326,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴘʀᴀʏᴇʀᴛɪᴍᴇ
 ㅤ┃❏ㅤ${usedPrefix}ᴄᴏɴᴠᴇʀᴛ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙈𝙖𝙞𝙣
 ㅤ┃❏ㅤ${usedPrefix}ᴄʜᴀɴɴᴇʟ
 ㅤ┃❏ㅤ${usedPrefix}ᴅᴀᴛᴀʙᴀsᴇ
@@ -380,30 +363,24 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}sᴇᴛᴘʀɪᴠᴀᴄʏ
 ㅤ┃❏ㅤ${usedPrefix}ᴀʟʟᴍᴇɴᴜ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘾𝙈𝘿
 ㅤ┃❏ㅤ${usedPrefix}sᴇᴛᴄᴍᴅ
 ㅤ┃❏ㅤ${usedPrefix}ᴅᴇʟᴄᴍᴅ
 ㅤ┃❏ㅤ${usedPrefix}ʟɪsᴛᴄᴍᴅ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙄𝙣𝙛𝙤
 ㅤ┃❏ㅤ${usedPrefix}ᴄɴɪɴғᴏ
 ㅤ┃❏ㅤ${usedPrefix}ғᴀᴄᴛ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙁𝙞𝙣𝙖𝙣𝙘𝙚
 ㅤ┃❏ㅤ${usedPrefix}ᴄʀʏᴘᴛᴏ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘾𝙧𝙮𝙥𝙩𝙤𝙘𝙪𝙧𝙧𝙚𝙣𝙘𝙮
 ㅤ┃❏ㅤ${usedPrefix}ᴄʀʏᴘᴛᴏ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙏𝙞𝙢𝙚
 ㅤ┃❏ㅤ${usedPrefix}ᴄᴏᴜɴᴛᴅᴏᴡɴ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙧𝙨
 ㅤ┃❏ㅤ${usedPrefix}ғᴀᴄᴇʙᴏᴏᴋ
 ㅤ┃❏ㅤ${usedPrefix}ɢɪᴛᴄʟᴏɴᴇ
@@ -423,12 +400,10 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ʏᴛᴍᴘ4
 ㅤ┃❏ㅤ${usedPrefix}ᴡᴀʟʟᴘᴀᴘᴇʀ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙋𝙧𝙚𝙢𝙞𝙪𝙢
 ㅤ┃❏ㅤ${usedPrefix}ɢᴅʀɪᴠᴇ
 ㅤ┃❏ㅤ${usedPrefix}ᴍᴇᴅɪᴀғɪʀᴇ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙀𝙘𝙤𝙣𝙤𝙢𝙮
 ㅤ┃❏ㅤ${usedPrefix}ᴀᴅᴅɢᴏʟᴅ
 ㅤ┃❏ㅤ${usedPrefix}ᴀᴅᴅxᴘ
@@ -444,7 +419,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ʟᴇᴠᴇʟᴜᴘ
 ㅤ┃❏ㅤ${usedPrefix}ʀᴀɴᴋ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘾𝙤𝙧𝙚
 ㅤ┃❏ㅤ${usedPrefix}ʀᴏʙ
 ㅤ┃❏ㅤ${usedPrefix}ʀᴏᴜʟʟᴇᴛᴛᴇ
@@ -452,11 +426,9 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴡɪᴛʜᴅʀᴀᴡ
 ㅤ┃❏ㅤ${usedPrefix}ᴡᴏʀᴋ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘾𝙤𝙧𝙚
 ㅤ┃❏ㅤ${usedPrefix}ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙂𝙖𝙢𝙚𝙨
 ㅤ┃❏ㅤ${usedPrefix}sʟᴏᴛ
 ㅤ┃❏ㅤ${usedPrefix}ᴄʜᴇss
@@ -469,17 +441,14 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ʀᴘs
 ㅤ┃❏ㅤ${usedPrefix}ᴛɪᴄᴛᴀᴄᴛᴏᴇ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘾𝙤𝙣𝙛𝙞𝙜
 ㅤ┃❏ㅤ${usedPrefix}ᴇɴᴀʙʟᴇ
 ㅤ┃❏ㅤ${usedPrefix}ᴅɪsᴀʙʟᴇ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙄𝙣𝙩𝙚𝙧𝙣𝙚𝙩
 ㅤ┃❏ㅤ${usedPrefix}ɢᴏᴏɢʟᴇ
 ㅤ┃❏ㅤ${usedPrefix}s
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ 𝙈𝙖𝙠𝙚𝙧
 ㅤ┃❏ㅤ${usedPrefix}ʙʟᴜʀ
 ㅤ┃❏ㅤ${usedPrefix}ᴅɪғᴜᴍɪɴᴀʀ2
@@ -507,26 +476,21 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ǫᴍᴋʀ
 ㅤ┃❏ㅤ${usedPrefix}ʏᴛᴄᴏᴍᴍᴇɴᴛ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙉𝙨𝙛𝙬
 ㅤ┃❏ㅤ${usedPrefix}ɴsғᴡ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙏𝙚𝙧𝙢𝙞𝙣𝙖𝙡
 ㅤ┃❏ㅤ$
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙋𝙡𝙪𝙜𝙞𝙣𝙨
 ㅤ┃❏ㅤ${usedPrefix}ᴘʟᴜɢɪɴs
 ㅤ┃❏ㅤ${usedPrefix}ɪɴsᴛᴀʟʟ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙍𝙚𝙜𝙞𝙨𝙩𝙚𝙧𝙖𝙩𝙞𝙤𝙣
 ㅤ┃❏ㅤ${usedPrefix}ʀᴇɢ
 ㅤ┃❏ㅤ${usedPrefix}ᴍʏsɴ
 ㅤ┃❏ㅤ${usedPrefix}ᴜɴʀᴇɢ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙎𝙩𝙞𝙘𝙠𝙚𝙧
 ㅤ┃❏ㅤ${usedPrefix}ᴇᴍᴏᴊɪᴍɪx
 ㅤ┃❏ㅤ${usedPrefix}ɢᴇᴛsᴛɪᴄᴋᴇʀ
@@ -548,7 +512,6 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}ᴀᴛᴛᴘ3
 ㅤ┃❏ㅤ${usedPrefix}ᴛᴀᴋᴇ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘼𝙪𝙙𝙞𝙤
 ㅤ┃❏ㅤ${usedPrefix}ʙᴀss
 ㅤ┃❏ㅤ${usedPrefix}ʙʟᴏᴡɴ
@@ -563,25 +526,21 @@ let str = `
 ㅤ┃❏ㅤ${usedPrefix}sᴍᴏᴏᴛʜ
 ㅤ┃❏ㅤ${usedPrefix}ᴛᴜᴘᴀɪ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝙉𝙚𝙬𝙨
 ㅤ┃❏ㅤ${usedPrefix}ɴᴇᴡs
 ㅤ┃❏ㅤ${usedPrefix}ᴛᴇᴄʜɴᴇᴡs
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ┌─𒀱ꪳ  𝘾𝙤𝙣𝙫𝙚𝙧𝙨𝙞𝙤𝙣
 ㅤ┃❏ㅤ${usedPrefix}ᴄᴏɴᴠᴇʀᴛ
 ㅤ┗─══━━━━✥◈✥━━━━══┛
-
 ㅤ © 𝘊𝘰 𝘱𝘰𝘸𝘦𝘳𝘦𝘥 𝘣𝘺 𝗪𝗛𝗜𝗧𝗘444_𝗬𝗧
 
 `
+    
+  conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, rpyt)
+    m.react('✅');
+};
 
-
-    conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, rpyt)
-    m.react(done)
-
-}
 handler.help = ['main']
 handler.tags = ['group']
 handler.command = ['menu1', 'imenu'] 
