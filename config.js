@@ -8,14 +8,14 @@ import axios from 'axios'
 // Global variables
 global.owner = [
   ['263788521064', 'Project-x', true], 
-  ['923184070915', '𝙎𝘼𝙇𝙈𝘼𝙉 𝘼𝙃𝙈𝘼𝘿 -(𝘼𝙝𝙢𝙢𝙞)', true], 
-  ['233533763772', 'Abraham Dwamena2.0', true],
-  ['233268374753', 'Abraham Dwamena3.0', true]
+  ['263788521064', '𝙎𝘼𝙇𝙈𝘼𝙉 𝘼𝙃𝙈𝘼𝘿 -(𝘼𝙝𝙢𝙢𝙞)', true], 
+  ['263788521064', 'Abraham Dwamena2.0', true],
+  ['263788521064', 'Abraham Dwamena3.0', true]
 ] 
 
-global.mods = ['263788521064','923184070915', '233268374753', '923184474176', '233268374753'] 
-global.prems = ['923184070915', '94789481495', '918360234087', '233268374753']
-global.allowed = ['923184070915', '233268374753', '918360234087', '233268374753']
+global.mods = ['263788521064','263788521064', '263788521064', '263788521064', '233268374753'] 
+global.prems = ['263788521064', '263788521064', '263788521064', '263788521064']
+global.allowed = ['263788521064', '263788521064', '263788521064', '263788521064']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = global.keysZens[Math.floor(global.keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
